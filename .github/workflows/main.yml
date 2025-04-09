@@ -1,0 +1,19 @@
+name: Pull Code to DigitalOcean
+
+on:
+  push:
+    branches:
+      - upwork-issues
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Pull changes from GitHub
+        run: ssh root@143.198.57.56 'cd /root/cecspvt && git pull'
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}

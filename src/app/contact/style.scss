@@ -1,0 +1,151 @@
+#contact {
+  margin: 130px 0 120px;
+  padding: 0 40px;
+  > p {
+    margin-bottom: 150px;
+    font-size: 2rem;
+    font-weight: var(--regular);
+    line-height: 2.5rem;
+    text-align: right;
+    color: var(--blue);
+    span {
+      color: var(--red);
+    }
+  }
+  .contact {
+    display: flex;
+    gap: 95px;
+    .info {
+      > div {
+        color: var(--blue);
+        h3 {
+          font-size: 22px;
+          font-weight: var(--bold);
+          line-height: 28px;
+          margin-bottom: 40px;
+        }
+        p {
+          font-size: 24px;
+          font-weight: var(--book);
+          line-height: 30px;
+          &:not(:last-child) {
+            margin-bottom: 12px;
+          }
+        }
+        &:not(:last-child) {
+          margin-bottom: 50px;
+        }
+      }
+      button {
+        padding-left: 90px;
+        padding-right: 90px;
+        a {
+          text-decoration: underline;
+        }
+      }
+    }
+    form {
+      width: 100%;
+      min-width: 50vw;
+      display: flex;
+      flex-direction: column;
+      .inputs {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 60px 40px;
+        > div {
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+          input {
+            border-bottom: 1px solid var(--red);
+            outline: none;
+            font-size: 22px;
+            font-weight: var(--book);
+            line-height: 27px;
+            color: var(--blue);
+            &:focus {
+              outline: none;
+            }
+          }
+          label {
+            position: absolute;
+            transition: 0.3s ease;
+            font-size: 22px;
+            font-weight: var(--book);
+            line-height: 27px;
+            color: var(--blue);
+            user-select: none;
+            pointer-events: none;
+          }
+          span {
+            position: absolute;
+            bottom: -25px;
+            right: 0;
+            color: red;
+            font-size: 14px;
+          }
+          &.focus {
+            label {
+              transform: translateY(-20px);
+              font-size: 14px;
+              line-height: 18px;
+              opacity: 0.7;
+            }
+          }
+        }
+      }
+      .message {
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        textarea {
+          font-size: 20px;
+          font-weight: var(--book);
+          line-height: 25px;
+          padding: 15px;
+          color: var(--blue);
+          margin-top: 15px;
+          border: 1px solid var(--red);
+          outline: none;
+          height: 100%;
+          &:focus {
+            outline: none;
+          }
+        }
+        label {
+          font-size: 22px;
+          font-weight: var(--book);
+          line-height: 27px;
+          color: var(--blue);
+        }
+      }
+      .button {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        label {
+          margin-bottom: 18px;
+          font-size: 14px;
+          font-weight: var(--book);
+          line-height: 17px;
+        }
+        button {
+          &:disabled {
+            background-color: var(--red);
+            opacity: 0.7;
+            cursor: not-allowed;
+            color: white;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 992px) {
+    .contact {
+      flex-wrap: wrap;
+    }
+  }
+}

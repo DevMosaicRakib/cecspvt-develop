@@ -1,0 +1,49 @@
+{
+  "name": "cesc-engineers",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.11.0",
+    "@hookform/resolvers": "^3.3.2",
+    "@reduxjs/toolkit": "^2.2.3",
+    "@splidejs/react-splide": "^0.7.12",
+    "@studio-freight/hamo": "^0.6.19",
+    "@studio-freight/lenis": "^1.0.24",
+    "@studio-freight/react-lenis": "^0.0.36",
+    "axios": "^1.5.1",
+    "clsx": "^2.0.0",
+    "gsap": "^3.12.2",
+    "leva": "^0.9.35",
+    "locomotive-scroll": "^4.1.4",
+    "next": "^13.5.7-canary.13",
+    "react": "^18",
+    "react-dom": "^18",
+    "react-google-recaptcha": "^3.1.0",
+    "react-hook-form": "^7.47.0",
+    "react-redux": "^9.1.1",
+    "react-spring": "^9.7.3",
+    "redux-persist": "^6.0.0",
+    "redux-thunk": "^3.1.0",
+    "sass": "^1.69.3",
+    "splitting": "^1.0.6",
+    "swiper": "^10.3.1",
+    "zod": "^3.22.4",
+    "zustand": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/node": "20.12.7",
+    "@types/react": "18.2.79",
+    "autoprefixer": "^10",
+    "eslint": "^8",
+    "eslint-config-next": "13.5.5",
+    "postcss": "^8",
+    "tailwindcss": "^3",
+    "typescript": "5.4.5"
+  }
+}

@@ -1,0 +1,377 @@
+#home {
+  .hero {
+    padding: 150px 0 72px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 17px;
+    color: black;
+    max-width: 950px;
+    margin: 0 auto;
+    #text-fade .char {
+      opacity: 0;
+    }
+    h1 {
+      font-size: 46px;
+      font-weight: var(--bold);
+      line-height: 57px;
+      text-align: center;
+    }
+    p {
+      font-size: 24px;
+      font-weight: var(--book);
+      line-height: 30px;
+      text-align: center;
+    }
+  }
+  .explore {
+    padding: 0 0 200px;
+    margin-bottom: 84px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(
+      180deg,
+      rgba(116, 200, 232, 0) 0%,
+      rgba(160, 232, 255, 0.700637) 100%
+    );
+
+    .buf {
+      padding: 25px 86px;
+      margin-top: 72px;
+      margin-bottom: 137px;
+    }
+    .reel {
+      height: 100vh;
+      width: 100%;
+      position: relative;
+      // margin-bottom: 100vh;
+      z-index: 3;
+
+      .video-wrapper {
+        width: 100%;
+        height: 100%;
+        iframe {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          //max-width: 100%;
+          transform: scale(0.8);
+          //pointer-events: none;
+          #player {
+            width: 100%;
+            max-width: unset;
+          }
+        }
+      }
+    }
+    p {
+      margin-top: 75px;
+      padding: 0 90px;
+      font-size: 32px;
+      font-weight: var(--regular);
+      line-height: 40px;
+      color: var(--blue);
+      text-align: center;
+    }
+    @media screen and (max-width: 768px) {
+      .buf {
+        margin-bottom: 50px;
+      }
+      .reel {
+        height: 27vh;
+      }
+      p {
+        padding: 0 40px;
+      }
+    }
+  }
+  .services {
+    padding: 30px 0;
+    margin: 0 95px 200px;
+    border-top: 1px solid var(--red);
+    display: flex;
+    justify-content: space-between;
+    h1 {
+      font-size: 28px;
+      font-weight: var(--bold);
+      line-height: 35px;
+      text-transform: uppercase;
+    }
+    div {
+      width: 100%;
+      p {
+        font-size: 24px;
+        font-weight: var(--book);
+        line-height: 30px;
+        color: var(--blue);
+        margin-bottom: 43px;
+      }
+      button {
+        width: 100%;
+        font-size: 22px;
+        font-weight: var(--bold);
+        line-height: 27px;
+      }
+    }
+    @media screen and (max-width: 992px) {
+      flex-wrap: wrap;
+      gap: 20px;
+      div {
+        max-width: unset;
+      }
+    }
+    @media screen and (max-width: 768px) {
+      margin: 0 40px 130px;
+    }
+  }
+  .companies {
+    margin: 0 40px 175px;
+    .wrapper {
+      display: flex;
+      position: relative;
+      top: -63px;
+      .red-box {
+        padding: 170px 55px;
+        display: grid;
+        background: var(--red);
+        grid-template-columns: repeat(3, minmax(100px, 150px));
+        min-width: 45vw;
+        transform-origin: top;
+        place-content: center;
+        gap: 30px;
+        grid-template-rows: repeat(3, 100px);
+        max-height: 660px;
+        figure {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            aspect-ratio: 1/1;
+            //object-fit: cover;
+          }
+        }
+      }
+      .text {
+        padding: 200px 90px;
+        display: flex;
+        flex-direction: column;
+        gap: 45px;
+        //align-items: center;
+        justify-content: center;
+        h3 {
+          font-size: 28px;
+          text-transform: uppercase;
+          font-weight: var(--bold);
+          line-height: 35px;
+          color: black;
+        }
+        p {
+          font-size: 24px;
+          font-weight: var(--book);
+          line-height: 30px;
+          color: var(--blue);
+        }
+      }
+    }
+    @media screen and (max-width: 992px) {
+      .wrapper {
+        .red-box {
+          padding: 100px 40px;
+        }
+        .text {
+          padding: 100px 20px;
+          h3 {
+            font-size: 24px;
+            line-height: 30px;
+          }
+          p {
+            font-size: 20px;
+            line-height: 25px;
+          }
+        }
+      }
+    }
+    @media screen and (max-width: 768px) {
+      margin-bottom: 0;
+      .wrapper {
+        flex-direction: column;
+        .red-box {
+          max-width: unset;
+          //margin: 0 auto;
+          gap: 0 25px;
+          padding: 40px 10px;
+          grid-template-columns: repeat(auto-fit, 140px);
+          justify-content: center;
+        }
+        .text {
+          padding: 50px 20px;
+        }
+      }
+    }
+    @media screen and (max-width: 480px) {
+      .wrapper {
+        .red-box {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .featured-project {
+    padding: 0 95px;
+    margin-bottom: 190px;
+    display: flex;
+    gap: 40px;
+    .content {
+      display: flex;
+      flex-direction: column;
+      min-width: 40vw;
+      h3 {
+        font-size: 28px;
+        font-weight: var(--bold);
+        line-height: 35px;
+        color: black;
+        margin-bottom: 40px;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 24px;
+        font-weight: var(--book);
+        line-height: 30px;
+        color: var(--blue);
+      }
+      button {
+        padding: 25px;
+        width: 100%;
+        margin-top: auto;
+      }
+    }
+    .image-box {
+      width: 100%;
+      min-width: 45vw;
+      .header {
+        background: var(--red);
+        border-radius: 4px 4px 0 0;
+        color: white;
+        padding: 32px 26px 26px;
+        font-size: 24px;
+        font-weight: var(--bold);
+        line-height: 30px;
+      }
+      figure {
+        //min-width: 500px;
+        //min-height: 300px;
+        //position: relative;
+        //overflow: hidden;
+        img {
+          //position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    @media screen and (max-width: 992px) {
+      padding: 0 45px;
+      flex-wrap: wrap;
+      .content {
+        gap: 30px;
+        h3 {
+          font-size: 24px;
+          line-height: 30px;
+        }
+        p {
+          font-size: 20px;
+          line-height: 25px;
+        }
+      }
+      .image-box {
+        min-width: unset;
+        .header {
+          padding: 20px 16px 16px;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  .blue-section {
+    margin: 0 40px;
+    .wrapper {
+      margin-bottom: 174px;
+      background: #c7f1ff;
+      .header {
+        //background: rgba(199, 241, 255, 1);
+
+        padding: 44px 50px 42px;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        justify-content: space-between;
+        p {
+          font-size: 28px;
+          font-weight: var(--bold);
+          line-height: 35px;
+          color: var(--blue);
+        }
+      }
+      figure {
+        transform-origin: top;
+        img {
+          max-height: 500px;
+          background: lightgray 50% / cover no-repeat;
+          mix-blend-mode: luminosity;
+        }
+      }
+      @media screen and (max-width: 768px) {
+        .header {
+          padding: 30px;
+          flex-wrap: wrap;
+          p {
+            font-size: 20px;
+            line-height: 24px;
+          }
+        }
+        figure img {
+          min-height: 300px;
+          object-fit: cover;
+        }
+      }
+    }
+    .reach-out {
+      margin-bottom: 127px;
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      justify-content: space-between;
+      p {
+        font-size: 32px;
+        font-weight: var(--regular);
+        line-height: 40px;
+        color: var(--blue);
+      }
+      button {
+        padding: 25px 90px;
+        font-size: 22px;
+        font-weight: var(--bold);
+        line-height: 27px;
+        text-wrap: nowrap;
+      }
+      @media screen and (max-width: 768px) {
+        flex-wrap: wrap;
+        p {
+          font-size: 24px;
+          line-height: 30px;
+        }
+        button {
+          padding: 25px 50px;
+          font-size: 18px;
+          line-height: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,230 @@
+#services {
+  margin-top: 137px;
+  main {
+    padding: 0 90px;
+    margin-bottom: 170px;
+    p {
+      font-size: 2rem;
+      font-weight: var(--regular);
+      line-height: 2.5rem;
+      margin-bottom: 137px;
+      text-align: center;
+    }
+    figure {
+      position: relative;
+      height: 245px;
+      img {
+        user-select: none;
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  #our-experience {
+    margin-bottom: 215px;
+    padding: 0 40px;
+    .items-wrapper {
+      margin-top: 75px;
+      display: flex;
+      //flex-wrap: wrap;
+      gap: 45px;
+      align-items: center;
+      //justify-content: center;
+      width: max-content;
+      .slider-wrapper .swiper-slide {
+        width: max-content;
+      }
+      .experience-card {
+        width: 308px;
+        height: 380px;
+        .experience-card__title {
+          background: var(--red);
+          padding: 32px 24px 30px;
+          font-size: 24px;
+          font-weight: var(--bold);
+          line-height: 30px;
+          color: white;
+          height: 125px;
+        }
+
+        .experience-card__image {
+          //height: 308px;
+          img {
+            height: 100% !important;
+            object-fit: cover;
+            user-select: none;
+          }
+        }
+      }
+    }
+  }
+
+  #our-markets {
+    margin: 0 40px 180px;
+    .content {
+      display: flex;
+      gap: 80px;
+      //align-items: center;
+      justify-content: space-between;
+      .boxes-wrapper {
+        position: relative;
+        top: -63px;
+        flex: 1;
+        .blue-overlay {
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          background: var(--blue);
+          top: 0;
+          left: 0;
+          z-index: 1;
+          transform-origin: top;
+        }
+        .red-box {
+          background: var(--red);
+        }
+        .red-box,
+        .blue-overlay {
+          padding: 0 0 225px;
+          color: white;
+          font-size: 1.5rem;
+          font-weight: var(--bold);
+          line-height: 1.75rem;
+          margin-left: auto;
+          // max-width: 500px;
+
+          h3 {
+            width: 100%;
+            padding: 16px 40px;
+            border-bottom: 1px solid white;
+            margin-bottom: 54px;
+            text-transform: uppercase;
+          }
+
+          ul {
+            display: flex;
+            flex-direction: column;
+            gap: 13px;
+            padding: 0 40px;
+            li {
+              cursor: pointer;
+            }
+          }
+        }
+       
+      }
+      figure {
+        // width: 700px;
+        max-width: 670px;
+        flex-grow: 1;
+        // padding: 50px;
+        position: relative; 
+        min-height: 300px;
+        min-width: 300px;
+        img {
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  #bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px 100px;
+    margin-bottom: 200px;
+    padding: 0 40px;
+    p {
+      font-size: 2rem;
+      font-weight: var(--regular);
+      line-height: 2.5rem;
+    }
+    .buf {
+      padding-left: 90px;
+      padding-right: 90px;
+      text-wrap: nowrap;
+    }
+  }
+
+  @media screen and (max-width: 992px) {
+    margin-top: 70px;
+    overflow: hidden;
+    main {
+      padding: 0 20px;
+      margin-bottom: 100px;
+      p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 50px;
+      }
+      figure {
+        height: unset;
+        img {
+          content: url("/services-mobile.svg");
+          max-width: 500px;
+        }
+      }
+    }
+    #our-markets {
+      margin-bottom: 110px;
+      .content {
+        .red-box {
+          top: 0;
+          width: max-content;
+          padding-bottom: 30px;
+          font-size: 1rem;
+          height: max-content;
+
+          h3 {
+            margin-bottom: 10px;
+            padding: 16px 30px;
+          }
+
+          ul {
+            padding: 0 30px;
+            gap: 7px;
+          }
+        }
+
+        figure {
+          padding: 50px 0;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    #our-markets .content {
+      flex-direction: column;
+      figure {
+        order: 2;
+        padding: 0;
+        width: 100%;
+        height: 300px;
+      }
+      .boxes-wrapper {
+        margin-top: 10px;
+        top: 0;
+        .red-box, .blue-overlay {
+          width: 100%;
+          margin: 0;
+          max-width: unset;
+        }
+      }
+    }
+    #our-experience {
+      padding: 0 20px;
+      .items-wrapper .slider-wrapper .swiper-slide {
+        width: 100%;
+        .experience-card {
+          width: 100%;
+        }
+      }
+    }
+    #bottom {
+      flex-wrap: wrap;
+    }
+  }
+}

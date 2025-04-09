@@ -1,0 +1,198 @@
+#company {
+  margin-top: 110px;
+  #hero {
+    display: flex;
+    flex-direction: column;
+    gap: 150px;
+    padding: 0 94px;
+    margin-bottom: 158px;
+    figure {
+      position: relative;
+      width: 100%;
+      height: 550px;
+      img {
+        object-fit: cover;
+        z-index: -1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+      span {
+        padding: 140px 40px 0;
+        color: white;
+        font-weight: var(--bold);
+        font-size: 46px;
+        line-height: 57px;
+        display: inline-block;
+        max-width: 1100px;
+      }
+    }
+    > p {
+      font-family: "Lineca", sans-serif;
+      font-weight: var(--regular);
+      color: var(--blue);
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+  #core {
+    margin: 0 40px 132px;
+    .red-box {
+      background: var(--red);
+      padding: 83px 78px 57px;
+      position: relative;
+      top: -63px;
+      margin-left: auto;
+      max-width: 500px;
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        li {
+          font-size: 24px;
+          font-weight: var(--bold);
+          line-height: 30px;
+          color: white;
+        }
+      }
+    }
+    .blue-box {
+      position: relative;
+      background: linear-gradient(
+        180deg,
+        #f8fdff 0%,
+        rgba(160, 232, 255, 0.700637) 100%
+      );
+      padding: 50px 53px 60px 42px;
+      > p {
+        font-size: 28px;
+        font-weight: var(--regular);
+        line-height: 35px;
+        text-align: right;
+        color: var(--blue);
+        max-width: 80%;
+        margin-left: auto;
+        margin-bottom: 35px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        width: max-content;
+        p {
+          font-size: 18px;
+          line-height: 22px;
+          color: var(--red);
+          &:first-child {
+            font-weight: var(--medium);
+          }
+          &:last-child {
+            font-weight: var(--book);
+          }
+        }
+      }
+      &::before {
+        content: url("/logo-lines.svg");
+        position: absolute;
+        top: 22px;
+        right: 24px;
+      }
+    }
+  }
+  #leader-ship {
+    margin: 0 40px 300px;
+    main {
+      margin-top: 64px;
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        &:first-child {
+          margin-bottom: 70px;
+          gap: 80px;
+
+          > div {
+            min-width: 350px;
+          }
+        }
+      }
+    }
+    .slider-wrapper {
+      //gap: 20px;
+      .swiper-slide {
+        width: max-content;
+        .swiper-card {
+          width: 300px;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    margin-top: 70px;
+    #hero {
+      padding: 0 30px;
+      figure {
+        height: 300px;
+        span {
+          padding: 60px 20px 0;
+          font-size: 27px;
+          line-height: 28px;
+        }
+      }
+      p {
+        font-size: 22px;
+        line-height: 28px;
+      }
+    }
+    #core {
+      margin: 0 30px 100px;
+      .red-box {
+        top: 0;
+        padding: 30px;
+        width: 100%;
+        ul {
+          li {
+            font-size: 18px;
+            line-height: 22px;
+            font-weight: var(--medium);
+          }
+        }
+      }
+      .blue-box {
+        margin-top: 20px;
+        padding: 20px;
+        p {
+          font-size: 18px;
+          line-height: 20px;
+          max-width: unset;
+          width: 100%;
+        }
+        div p {
+          margin-bottom: 5px;
+        }
+      }
+    }
+    #leader-ship {
+      margin: 0 30px 100px;
+      main > div {
+        &:first-child {
+          gap: 40px;
+          margin-bottom: 30px;
+        }
+      }
+      .slider-wrapper {
+        .swiper-slide {
+          min-width: unset;
+          .swiper-card {
+            width: 250px;
+          }
+        }
+      }
+    }
+  }
+}
